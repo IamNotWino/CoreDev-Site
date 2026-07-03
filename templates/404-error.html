@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Проблема с интернетом</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/error.css">
+</head>
+<body>
+    <main class="error-shell">
+        <div class="error-orb error-orb-blue"></div>
+        <div class="error-orb error-orb-red"></div>
+        <section class="error-card">
+            <div class="error-topline"><i class="fas fa-shield-virus"></i> CoreDev Security Gateway</div>
+            <div class="error-code">404</div>
+            <div class="error-icon"><i class="fas fa-wifi"></i></div>
+            <h1>Проблема с интернетом</h1>
+            <p id="errorReasonText">Соединение нестабильно, API безопасности недоступен или IP-адрес изменился во время работы сайта.</p>
+            <div class="error-hint">
+                <i class="fas fa-shield-alt"></i>
+                Для защиты сайта доступ временно остановлен. Проверьте интернет, VPN или прокси и попробуйте снова.
+            </div>
+            <div class="connection-panel">
+                <div class="pulse-dot"></div>
+                <span id="connectionStatus">Ожидаем восстановление соединения...</span>
+            </div>
+            <div class="error-actions">
+                <button class="btn-primary" id="retryConnectionBtn" type="button"><i class="fas fa-sync-alt"></i> Проверить снова</button>
+            </div>
+        </section>
+    </main>
+    <script src="/static/js/error.js"></script>
+</body>
+</html>

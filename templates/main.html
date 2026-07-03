@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>CoreDev | Разработка и IT-решения</title>
+    <script src="/static/js/theme-init.js"></script>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/redesign.css">
+    <link rel="stylesheet" href="/static/css/support-chat.css">
+</head>
+<body>
+<div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+<nav class="navbar" id="siteNavbar">
+    <div class="container nav-flex">
+        <a href="#home" class="logo">Core<span>Dev</span></a>
+        <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="navPanel">
+            <span class="nav-menu-toggle-box" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <div class="nav-panel" id="navPanel">
+            <button type="button" class="nav-panel-close" id="navPanelClose" aria-label="Закрыть меню">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div class="nav-panel-inner">
+                <div class="nav-links">
+                    <a href="#home"><i class="fas fa-home"></i> Главная</a>
+                    <a href="#about"><i class="fas fa-building"></i> О компании</a>
+                    <a href="#skills"><i class="fas fa-microchip"></i> Что умеем</a>
+                    <a href="#projects"><i class="fas fa-layer-group"></i> Проекты</a>
+                    <a href="#team"><i class="fas fa-users"></i> Команда</a>
+                    <a href="#apply"><i class="fas fa-paper-plane"></i> Заявка</a>
+                </div>
+                <div class="nav-panel-divider" aria-hidden="true"></div>
+                <div class="auth-buttons">
+                    <button id="openLoginBtn" class="btn-secondary nav-auth-btn nav-login-btn"><i class="fas fa-sign-in-alt"></i> Вход</button>
+                    <button id="openRegisterBtn" class="btn-primary nav-auth-btn nav-register-btn"><i class="fas fa-user-plus"></i> Регистрация</button>
+                    <div id="userProfile" class="user-profile">
+                        <button id="profileTrigger" class="profile-trigger" type="button">
+                            <span id="profileAvatar" class="profile-avatar">U</span>
+                            <span class="profile-chip-main">
+                                <span id="profileName" class="profile-name">user</span>
+                                <span id="profileRoleBadge" class="profile-role-badge" hidden>
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                    <span class="profile-role-badge-text">Админ</span>
+                                </span>
+                            </span>
+                            <i class="fas fa-chevron-down profile-chevron"></i>
+                        </button>
+                        <div class="profile-menu">
+                            <button type="button" id="profileMenuProfile"><i class="fas fa-user"></i> Профиль</button>
+                            <button type="button" id="profileMenuSettings"><i class="fas fa-cog"></i> Настройки</button>
+                            <button type="button" id="profileMenuAdmin" class="profile-menu-admin" hidden><i class="fas fa-user-shield"></i> <span id="profileMenuAdminText" class="profile-menu-admin-text">Админ панель</span><span class="admin-nav-badge profile-menu-admin-badge" id="profileMenuAdminBadge" hidden aria-hidden="true"></span></button>
+                            <button type="button" id="profileMenuLogout" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Выйти</button>
+                        </div>
+                    </div>
+                    <button type="button" id="themeToggleBtn" class="nav-theme-toggle" data-theme-icon="moon" aria-label="Включить светлую тему" title="Включить светлую тему">
+                        <span class="nav-theme-toggle-icon" aria-hidden="true"><i class="fas fa-moon"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay" hidden></div>
+</nav>
+
+<!-- Остальные секции (hero, about, skills, projects, team, apply) без изменений для краткости, но они полностью сохранены -->
+<section id="home" class="hero"><div class="hero-aurora" aria-hidden="true"></div><div class="container hero-grid"><div class="hero-content"><div class="hero-kicker"><i class="fas fa-bolt"></i> AI-first разработка для бизнеса</div><h1>Код, меняющий <span class="hero-highlight">реальность</span><br>CoreDev AI Core</h1><p>Разработка сложных систем, нейросетевые архитектуры, масштабируемая облачная инфраструктура. Создаём технологическое лидерство.</p><div class="hero-stats"><div class="stat-item"><h3>120+</h3><span>проектов</span></div><div class="stat-item"><h3>45</h3><span>экспертов</span></div><div class="stat-item"><h3>8 лет</h3><span>на рынке</span></div></div><div class="hero-actions"><a href="#skills" class="btn-primary"><i class="fas fa-arrow-right"></i> Наши услуги</a><a href="#about" class="btn-outline">Узнать больше</a></div></div><div class="hero-graphic" aria-hidden="true"><div class="hero-orb hero-orb-1"></div><div class="hero-orb hero-orb-2"></div><div class="hero-chip-icon"><i class="fas fa-microchip"></i></div></div></div></section>
+
+<section id="about" class="section-about-large"><div class="container"><h2 class="section-title">О компании CoreDev</h2><div class="section-sub">Технологическое сердце вашего бизнеса — от идеи до масштабирования. Глобальная экспертиза, проверенная временем.</div><div style="display:flex;flex-direction:column;gap:28px"><p style="font-size:18px;line-height:1.7">CoreDev — это международная IT-компания, основанная в 2016 году экспертами в области высоконагруженных систем, кибербезопасности и искусственного интеллекта... Мы объединяем более 150 инженеров.</p><div class="about-details-grid"><div class="about-feature"><i class="fas fa-globe-americas"></i><h4>Глобальное присутствие</h4><p>Офисы и R&D-центры в 8 странах, 24/7 поддержка.</p></div><div class="about-feature"><i class="fas fa-chart-line"></i><h4>Бизнес-результаты</h4><p>Средний ROI наших клиентов за 18 месяцев — 340%.</p></div><div class="about-feature"><i class="fas fa-shield-virus"></i><h4>Безопасность эталонного уровня</h4><p>Сертификаты ISO 27001, SOC 2 Type II.</p></div><div class="about-feature"><i class="fas fa-robot"></i><h4>AI-First подход</h4><p>Собственная MLOps платформа, генеративные нейросети.</p></div></div><button id="moreAboutBtn" class="btn-primary about-more-btn"><i class="fas fa-file-alt"></i> Подробнее о CoreDev</button></div></div></section>
+
+<section id="skills"><div class="container"><h2 class="section-title">Что умеем</h2><div class="section-sub">Мы создаём цифровые продукты любой сложности — от лендингов до высоконагруженных игр и AI-ботов.</div><div class="skills-grid"><div class="card"><div class="project-icon"><i class="fas fa-code"></i></div><h3>🌐 Веб-сайты</h3><p>Современные веб-приложения на React, Vue, Angular, Node.js, Python, Go.</p><div class="tags"><span class="tag">Frontend</span><span class="tag">Backend</span></div><button class="btn-small" onclick="alert('🚀 Веб-решения любой сложности')">Подробнее →</button></div><div class="card"><div class="project-icon"><i class="fab fa-telegram"></i></div><h3>🤖 Боты</h3><p>Умные боты для Telegram, Discord, AI-диалоги, автоматизация.</p><div class="tags"><span class="tag">Telegram API</span><span class="tag">AI-боты</span></div><button class="btn-small" onclick="alert('🤖 Интегрируем платежи, CRM')">Подробнее →</button></div><div class="card"><div class="project-icon"><i class="fas fa-mobile-alt"></i></div><h3>📱 Мобильные приложения</h3><p>Нативные (Kotlin, Swift) и кроссплатформенные (Flutter, React Native).</p><div class="tags"><span class="tag">iOS/Swift</span><span class="tag">Android</span></div><button class="btn-small" onclick="alert('📲 Приложения для e‑commerce')">Подробнее →</button></div><div class="card"><div class="project-icon"><i class="fas fa-gamepad"></i></div><h3>🎮 Игры</h3><p>Unity (C#), Unreal Engine, браузерные HTML5 игры, мультиплеер.</p><div class="tags"><span class="tag">Unity/Unreal</span><span class="tag">2D/3D</span></div><button class="btn-small" onclick="alert('🎲 Создаём игры под Android, iOS, ПК')">Подробнее →</button></div><div class="card"><div class="project-icon"><i class="fas fa-desktop"></i></div><h3>💻 Десктоп и корпоративный софт</h3><p>CRM, ERP, автоматизация, Electron, .NET, C++ Qt.</p><div class="tags"><span class="tag">Electron</span><span class="tag">.NET/C#</span></div><button class="btn-small" onclick="alert('🏢 Софт для бизнеса')">Подробнее →</button></div><div class="card"><div class="project-icon"><i class="fas fa-microchip"></i></div><h3>🧠 AI / ChatGPT интеграции</h3><p>LLM, распознавание изображений, рекомендательные системы.</p><div class="tags"><span class="tag">OpenAI API</span><span class="tag">Data Science</span></div><button class="btn-small" onclick="alert('🧬 GPT-4, Claude, Llama')">Подробнее →</button></div>
+<div class="card"><div class="project-icon"><i class="fas fa-cloud"></i></div><h3>☁️ Cloud & DevOps</h3><p>Проектирование облачной инфраструктуры, CI/CD, Kubernetes, Terraform.</p><div class="tags"><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">K8s</span></div><button class="btn-small" onclick="alert('☁️ Полный цикл DevOps и облака')">Подробнее →</button></div>
+<div class="card"><div class="project-icon"><i class="fas fa-shield-alt"></i></div><h3>🔒 Кибербезопасность</h3><p>Penetration testing, Zero Trust, compliance, защита критической инфраструктуры.</p><div class="tags"><span class="tag">ISO 27001</span><span class="tag">SOC2</span></div><button class="btn-small" onclick="alert('🔐 Полный цикл безопасности')">Подробнее →</button></div></div></div></section>
+
+<section id="projects"><div class="container"><div class="section-head-row"><div><h2 class="section-title">Реализованные проекты</h2><div class="section-sub">Кейсы, которые доказывают наш уровень.</div></div><button type="button" id="addProjectBtn" class="btn-primary section-admin-btn" hidden><i class="fas fa-plus"></i> Добавить</button></div><div class="skills-grid" id="projectsGrid" style="grid-template-columns:repeat(auto-fill,minmax(270px,1fr))"></div></div></section>
+
+<section id="team"><div class="container"><div class="section-head-row"><div><h2 class="section-title">Ключевые сотрудники</h2><div class="section-sub">Элита индустрии.</div></div><button type="button" id="addTeamMemberBtn" class="btn-primary section-admin-btn" hidden><i class="fas fa-plus"></i> Добавить</button></div><div class="team-grid" id="teamGrid"></div></div></section>
+
+<section id="apply"><div class="container"><h2 class="section-title">Подать заявку</h2><div class="section-sub">Заполните форму, и мы свяжемся с вами в течение 24 часов.</div><div class="form-fullwidth"><div class="form-header"><h3><i class="fas fa-rocket"></i> Старт вашего проекта</h3><p>Расскажите о себе и задачах</p></div><form id="contactForm" novalidate><div class="form-row"><div class="form-group form-field"><label for="projectFullName">ФИО</label><input type="text" id="projectFullName" name="name" required><div class="field-error" id="projectFullNameError"></div></div><div class="form-group form-field"><label for="projectCompany">Компания</label><input type="text" id="projectCompany" name="company"><div class="field-error" id="projectCompanyError"></div></div></div><div class="form-row"><div class="form-group form-field"><label for="projectEmail">Email</label><input type="email" id="projectEmail" name="email" required><div class="field-error" id="projectEmailError"></div></div><div class="form-group form-field"><label for="projectPhone">Телефон</label><input type="tel" id="projectPhone" name="phone" inputmode="numeric" maxlength="11" placeholder="79001234567" required><div class="field-error" id="projectPhoneError"></div></div></div><div class="form-row"><div class="form-group form-field"><label for="projectPosition">Направление</label><select id="projectPosition" name="position" required><option value="">Выберите направление</option><option>Разработка ПО</option><option>AI / Машинное обучение</option><option>Веб-разработка</option><option>Мобильные приложения</option><option>Облачные решения</option><option>Кибербезопасность</option></select><div class="field-error" id="projectPositionError"></div></div><div class="form-group form-field"><label for="projectBudgetAmount">Бюджет</label><div class="budget-row"><input type="text" id="projectBudgetAmount" name="budget_amount" inputmode="numeric" placeholder="Сумма" required><select id="projectBudgetCurrency" name="budget_currency" required><option value="RUB">Рубли (₽)</option><option value="USD">Доллары ($)</option><option value="KZT">Тенге (₸)</option></select></div><div class="field-error" id="projectBudgetError"></div></div></div><div class="form-group full-width form-field"><label for="projectMessage">Описание задачи</label><textarea id="projectMessage" name="message" rows="6" maxlength="10000" required></textarea><div class="field-hint" id="projectMessageCounter">Минимум 100 символов. Сейчас: 0 / 10000</div><div class="field-error" id="projectMessageError"></div></div><button type="submit" class="btn-primary" id="projectSubmitBtn" style="width:100%;justify-content:center;padding:14px"><i class="fas fa-paper-plane"></i> Отправить заявку</button><div id="formFeedback" class="form-status" style="display:none"></div></form></div></div></section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="logo">Core<span>Dev</span></div>
+                <p>Инженерная команда для сложных цифровых продуктов: веб, AI, облака, безопасность и высоконагруженные системы.</p>
+                <div class="footer-actions">
+                    <a class="footer-button" href="#apply"><i class="fas fa-rocket"></i> Запустить проект</a>
+                    <a class="footer-button" href="#projects"><i class="fas fa-layer-group"></i> Кейсы</a>
+                </div>
+                <div class="footer-badges">
+                    <span class="footer-badge">ISO 27001</span>
+                    <span class="footer-badge">SOC 2 Ready</span>
+                    <span class="footer-badge">24/7 Support</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Документация</h4>
+                <a href="#"><i class="fas fa-book"></i> Документация</a>
+                <a href="#"><i class="fas fa-code"></i> API Reference</a>
+                <a href="#"><i class="fas fa-file-alt"></i> Руководства</a>
+                <a href="#"><i class="fas fa-terminal"></i> SDK и CLI</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <a href="#about"><i class="fas fa-building"></i> О компании</a>
+                <a href="#team"><i class="fas fa-users"></i> Команда</a>
+                <a href="#skills"><i class="fas fa-microchip"></i> Услуги</a>
+                <a href="#apply"><i class="fas fa-envelope-open-text"></i> Контакты</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Правовая информация</h4>
+                <a href="#" id="footerPolicyLink"><i class="fas fa-user-shield"></i> Политика конфиденциальности</a>
+                <a href="#"><i class="fas fa-scale-balanced"></i> Условия использования</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Безопасность</a>
+                <a href="#"><i class="fas fa-cookie-bite"></i> Cookies</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">© 2025 CoreDev. Все права защищены.</div>
+            <div class="footer-legal">
+                <a href="#">Статус систем</a>
+                <a href="#">Поддержка</a>
+                <a href="#">contact@coredev.com</a>
+                <a href="#">+44 20 7946 0138</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Модальные окна: Вход и ОБНОВЛЕННАЯ РЕГИСТРАЦИЯ с ФИО, username, подтверждение пароля, чекбокс согласия -->
+<div id="loginModal" class="modal">
+  <div class="modal-content login-modal">
+    <div class="modal-header">
+      <div>
+        <span class="login-kicker"><i class="fas fa-shield-alt"></i> Безопасный вход</span>
+        <h3><i class="fas fa-sign-in-alt"></i> Вход в аккаунт</h3>
+        <p class="modal-subtitle">Введите данные, чтобы продолжить работу с CoreDev</p>
+      </div>
+      <span class="close-modal">&times;</span>
+    </div>
+
+    <form id="loginForm" class="auth-form" autocomplete="off">
+      <div class="form-field">
+        <label for="loginEmail"><i class="fas fa-envelope"></i> Email</label>
+        <div class="input-shell">
+          <i class="fas fa-envelope input-shell-icon" aria-hidden="true"></i>
+          <input type="email" id="loginEmail" placeholder="you@coredev.ru" autocomplete="off" required>
+        </div>
+        <div class="field-error" id="loginEmailError"></div>
+      </div>
+
+      <div class="form-field">
+        <label for="loginPassword"><i class="fas fa-lock"></i> Пароль</label>
+        <div class="password-wrapper input-shell">
+          <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+          <input type="password" id="loginPassword" placeholder="Введите пароль" autocomplete="new-password" required>
+          <i class="fas fa-eye toggle-password" data-target="loginPassword" aria-label="Показать пароль"></i>
+        </div>
+        <div class="field-error" id="loginPasswordError"></div>
+        <button type="button" id="openForgotPasswordBtn" class="auth-link-btn">Забыли пароль?</button>
+      </div>
+
+      <label class="checkbox-group custom-checkbox">
+        <input type="checkbox" id="loginRemember">
+        <span class="checkbox-ui" aria-hidden="true"></span>
+        <span>Запомнить меня</span>
+      </label>
+
+      <button type="submit" class="btn-primary btn-block btn-lg">Войти</button>
+      <div id="loginStatus" class="auth-status"></div>
+    </form>
+  </div>
+</div>
+
+<div id="forgotPasswordModal" class="modal" aria-hidden="true">
+  <div class="modal-content login-modal">
+    <div class="modal-header">
+      <div>
+        <span class="login-kicker"><i class="fas fa-unlock-alt"></i> Восстановление доступа</span>
+        <h3><i class="fas fa-key"></i> Забыли пароль?</h3>
+        <p class="modal-subtitle">Введите email, который указывали при регистрации</p>
+      </div>
+      <span class="close-modal">&times;</span>
+    </div>
+    <form id="forgotPasswordForm" class="auth-form" autocomplete="off">
+      <div class="form-field">
+        <label for="forgotPasswordEmail"><i class="fas fa-envelope"></i> Email</label>
+        <div class="input-shell">
+          <i class="fas fa-envelope input-shell-icon" aria-hidden="true"></i>
+          <input type="email" id="forgotPasswordEmail" placeholder="you@coredev.ru" autocomplete="email" required>
+        </div>
+        <div class="field-error" id="forgotPasswordEmailError"></div>
+      </div>
+      <button type="submit" class="btn-primary btn-block btn-lg">Отправить ссылку</button>
+      <button type="button" id="backToLoginFromForgotBtn" class="btn-secondary btn-block auth-back-btn">Вернуться ко входу</button>
+      <div id="forgotPasswordStatus" class="auth-status"></div>
+    </form>
+  </div>
+</div>
+
+<div id="resetPasswordModal" class="modal" aria-hidden="true">
+  <div class="modal-content login-modal">
+    <div class="modal-header">
+      <div>
+        <span class="login-kicker"><i class="fas fa-shield-alt"></i> Новый пароль</span>
+        <h3><i class="fas fa-lock"></i> Сброс пароля</h3>
+        <p class="modal-subtitle">Придумайте новый пароль для вашего аккаунта</p>
+      </div>
+      <span class="close-modal">&times;</span>
+    </div>
+    <form id="resetPasswordForm" class="auth-form" autocomplete="off">
+      <input type="hidden" id="resetPasswordToken" value="">
+      <div class="form-field">
+        <label for="resetPasswordEmail"><i class="fas fa-envelope"></i> Email аккаунта</label>
+        <div class="input-shell">
+          <i class="fas fa-envelope input-shell-icon" aria-hidden="true"></i>
+          <input type="email" id="resetPasswordEmail" class="auth-input-readonly" placeholder="Email из ссылки сброса" readonly aria-readonly="true" tabindex="-1">
+        </div>
+        <div class="field-error" id="resetPasswordEmailError"></div>
+      </div>
+      <div class="form-field">
+        <label for="resetNewPassword"><i class="fas fa-lock"></i> Новый пароль</label>
+        <div class="password-wrapper input-shell">
+          <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+          <input type="password" id="resetNewPassword" placeholder="Введите новый пароль" autocomplete="new-password" required>
+          <i class="fas fa-eye toggle-password" data-target="resetNewPassword" aria-label="Показать пароль"></i>
+        </div>
+        <div class="field-error" id="resetNewPasswordError"></div>
+      </div>
+      <div class="form-field">
+        <label for="resetConfirmPassword"><i class="fas fa-lock"></i> Подтверждение пароля</label>
+        <div class="password-wrapper input-shell">
+          <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+          <input type="password" id="resetConfirmPassword" placeholder="Повторите новый пароль" autocomplete="new-password" required>
+          <i class="fas fa-eye toggle-password" data-target="resetConfirmPassword" aria-label="Показать пароль"></i>
+        </div>
+        <div class="field-error" id="resetConfirmPasswordError"></div>
+      </div>
+      <button type="submit" class="btn-primary btn-block btn-lg">Сохранить новый пароль</button>
+      <p class="auth-hint reset-password-hint">
+        Пароль: 8–20 символов, заглавная и строчная буква, цифра и спецсимвол.
+      </p>
+      <div id="resetPasswordStatus" class="auth-status"></div>
+    </form>
+  </div>
+</div>
+
+<div id="profileModal" class="modal">
+  <div class="modal-content profile-edit-modal">
+    <div class="modal-header">
+      <div>
+        <span class="login-kicker"><i class="fas fa-user-cog"></i> Профиль</span>
+        <h3><i class="fas fa-user"></i> Данные пользователя</h3>
+        <p class="modal-subtitle">Измените ник, имя, email или загрузите новую аватарку</p>
+      </div>
+      <span class="close-modal">&times;</span>
+    </div>
+
+    <form id="profileEditForm" class="auth-form" autocomplete="off">
+      <div class="profile-layout">
+        <div class="profile-side-card">
+          <div id="profileEditAvatarPreview" class="profile-editor-avatar">U</div>
+          <div id="profileModalRoleBadge" class="profile-modal-role-badge" hidden>
+            <i class="fas fa-crown" aria-hidden="true"></i>
+            <span class="profile-modal-role-badge-text">Админ</span>
+          </div>
+          <div class="profile-editor-title">Аватар профиля</div>
+          <div class="profile-editor-subtitle">Загрузите изображение, чтобы аккаунт выглядел персонально.</div>
+          <label class="avatar-upload-label">
+            <i class="fas fa-camera"></i> Загрузить аватарку
+            <input type="file" id="profileAvatarInput" accept="image/*">
+          </label>
+          <div class="profile-editor-hint">PNG, JPG или WebP. Сохраняется локально в браузере.</div>
+        </div>
+
+        <div class="profile-main-card">
+          <div class="profile-section-title"><i class="fas fa-id-card"></i> Основные данные</div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="profileEditUsername"><i class="fas fa-user-tag"></i> Ник</label>
+              <div class="input-shell">
+                <i class="fas fa-user-tag input-shell-icon" aria-hidden="true"></i>
+                <input type="text" id="profileEditUsername" placeholder="username" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="profileEditEmail"><i class="fas fa-envelope"></i> Email</label>
+              <div class="input-shell">
+                <i class="fas fa-envelope input-shell-icon" aria-hidden="true"></i>
+                <input type="email" id="profileEditEmail" placeholder="you@coredev.ru" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="profileEditFullName"><i class="fas fa-user"></i> ФИО</label>
+            <div class="input-shell">
+              <i class="fas fa-user input-shell-icon" aria-hidden="true"></i>
+              <input type="text" id="profileEditFullName" placeholder="ФИО пользователя">
+            </div>
+          </div>
+
+          <div class="profile-save-row">
+              <button type="submit" class="btn-primary btn-block"><i class="fas fa-save"></i> Сохранить</button>
+            </div>
+          <div id="profileEditStatus" class="auth-status"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="deleteAccountModal" class="modal">
+  <div class="modal-content profile-edit-modal confirm-delete-modal">
+    <div class="confirm-delete-icon"><i class="fas fa-trash-alt"></i></div>
+    <h3>Удалить аккаунт?</h3>
+    <p class="confirm-delete-text">Вы действительно хотите удалить свой аккаунт безвозвратно? После удаления аккаунта даже администраторы не смогут его восстановить.</p>
+    <div class="form-field confirm-delete-field">
+      <label for="deleteAccountPassword"><i class="fas fa-lock"></i> Подтвердите пароль</label>
+      <div class="password-wrapper input-shell">
+        <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+        <input type="password" id="deleteAccountPassword" placeholder="Введите пароль для подтверждения" autocomplete="current-password">
+        <i class="fas fa-eye toggle-password" data-target="deleteAccountPassword" aria-label="Показать пароль"></i>
+      </div>
+      <div class="field-error" id="deleteAccountPasswordError"></div>
+    </div>
+    <div class="confirm-delete-actions">
+      <button type="button" id="confirmDeleteAccountBtn" class="btn-secondary danger-button"><i class="fas fa-check"></i> Да</button>
+      <button type="button" id="cancelDeleteAccountBtn" class="btn-primary"><i class="fas fa-times"></i> Нет</button>
+    </div>
+    <div id="deleteAccountStatus" class="auth-status"></div>
+  </div>
+</div>
+
+<div id="changePasswordModal" class="modal">
+  <div class="modal-content profile-edit-modal">
+    <div class="modal-header">
+      <div>
+        <span class="login-kicker"><i class="fas fa-key"></i> Безопасность</span>
+        <h3><i class="fas fa-lock"></i> Изменить пароль</h3>
+        <p class="modal-subtitle">Введите старый пароль, новый пароль и подтверждение</p>
+      </div>
+      <span class="close-modal">&times;</span>
+    </div>
+
+    <form id="changePasswordForm" class="auth-form" autocomplete="off">
+      <div class="form-field">
+        <label for="changeOldPassword"><i class="fas fa-key"></i> Старый пароль</label>
+        <div class="password-wrapper input-shell">
+          <i class="fas fa-key input-shell-icon" aria-hidden="true"></i>
+          <input type="password" id="changeOldPassword" placeholder="Введите старый пароль" autocomplete="current-password" required>
+          <i class="fas fa-eye toggle-password" data-target="changeOldPassword" aria-label="Показать пароль"></i>
+        </div>
+        <div class="field-error" id="changeOldPasswordError"></div>
+      </div>
+
+      <div class="form-field">
+        <label for="changeNewPassword"><i class="fas fa-lock"></i> Новый пароль</label>
+        <div class="password-wrapper input-shell">
+          <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+          <input type="password" id="changeNewPassword" placeholder="Введите новый пароль" autocomplete="new-password" required>
+          <i class="fas fa-eye toggle-password" data-target="changeNewPassword" aria-label="Показать пароль"></i>
+        </div>
+        <div class="field-error" id="changeNewPasswordError"></div>
+      </div>
+
+      <div class="form-field">
+        <label for="changeConfirmPassword"><i class="fas fa-lock"></i> Подтверждение пароля</label>
+        <div class="password-wrapper input-shell">
+          <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+          <input type="password" id="changeConfirmPassword" placeholder="Повторите новый пароль" autocomplete="new-password" required>
+          <i class="fas fa-eye toggle-password" data-target="changeConfirmPassword" aria-label="Показать пароль"></i>
+        </div>
+        <div class="field-error" id="changeConfirmPasswordError"></div>
+      </div>
+
+      <div class="profile-save-row">
+        <button type="submit" class="btn-primary btn-block btn-lg">Сохранить пароль</button>
+      </div>
+      <div id="changePasswordStatus" class="auth-status"></div>
+    </form>
+  </div>
+</div>
+
+<div id="registerModal" class="modal">
+  <div class="modal-content register-modal">
+    <div class="modal-header">
+      <div>
+        <span class="register-kicker"><i class="fas fa-bolt"></i> Быстрый старт</span>
+        <h3><i class="fas fa-user-plus"></i> Создать аккаунт</h3>
+        <p class="modal-subtitle">Присоединяйтесь к сообществу инженеров CoreDev</p>
+        </div>
+      <span class="close-modal">&times;</span>
+    </div>
+
+    <form id="registerForm" class="auth-form" autocomplete="off">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="regFullName"><i class="fas fa-user"></i> ФИО</label>
+          <div class="input-shell">
+            <i class="fas fa-user input-shell-icon" aria-hidden="true"></i>
+            <input type="text" id="regFullName" placeholder="Иванов Иван Иванович" autocomplete="off" required>
+          </div>
+          <div class="field-error" id="regFullNameError"></div>
+        </div>
+        <div class="form-field">
+          <label for="regUsername"><i class="fas fa-user-tag"></i> Имя пользователя</label>
+          <div class="input-shell">
+            <i class="fas fa-user-tag input-shell-icon" aria-hidden="true"></i>
+            <input type="text" id="regUsername" placeholder="ivanov_ivan" autocomplete="off" required>
+          </div>
+          <div class="field-error" id="regUsernameError"></div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="regEmail"><i class="fas fa-envelope"></i> Email</label>
+        <div class="input-shell">
+          <i class="fas fa-envelope input-shell-icon" aria-hidden="true"></i>
+          <input type="email" id="regEmail" placeholder="you@coredev.ru" autocomplete="off" required>
+        </div>
+        <div class="field-error" id="regEmailError"></div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="regPassword"><i class="fas fa-lock"></i> Пароль</label>
+          <div class="password-wrapper input-shell">
+            <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+            <input type="password" id="regPassword" placeholder="Минимум 8 символов" autocomplete="new-password" required>
+            <i class="fas fa-eye toggle-password" data-target="regPassword" aria-label="Показать пароль"></i>
+          </div>
+          <div class="field-error" id="regPasswordError"></div>
+        </div>
+        <div class="form-field">
+          <label for="regConfirmPassword"><i class="fas fa-lock"></i> Подтверждение пароля</label>
+          <div class="password-wrapper input-shell">
+            <i class="fas fa-lock input-shell-icon" aria-hidden="true"></i>
+            <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" autocomplete="new-password" required>
+            <i class="fas fa-eye toggle-password" data-target="regConfirmPassword" aria-label="Показать пароль"></i>
+          </div>
+          <div class="field-error" id="regConfirmPasswordError"></div>
+        </div>
+      </div>
+
+      <label class="checkbox-group custom-checkbox">
+        <input type="checkbox" id="regAgree" required>
+        <span class="checkbox-ui" aria-hidden="true"></span>
+        <span>Я принимаю <a href="#" id="policyLink">политику конфиденциальности</a> и условия использования</span>
+      </label>
+
+      <button type="submit" class="btn-primary btn-block btn-lg" id="registerSubmitBtn" disabled>Зарегистрироваться</button>
+      <div id="regStatus" class="auth-status"></div>
+    </form>
+        </div>
+    </div>
+
+<div id="emailVerifyModal" class="modal" aria-hidden="true">
+  <div class="modal-content login-modal">
+    <div class="modal-header">
+      <div>
+        <span class="login-kicker"><i class="fas fa-envelope-open-text"></i> Подтверждение email</span>
+        <h3><i class="fas fa-shield-check"></i> Проверка почты</h3>
+        <p class="modal-subtitle">Мы отправили 6-значный код на вашу почту. Введите его ниже.</p>
+      </div>
+      <span class="close-modal">&times;</span>
+    </div>
+    <form id="emailVerifyForm" class="auth-form" autocomplete="off">
+      <div class="form-field">
+        <label for="emailVerifyAddress"><i class="fas fa-envelope"></i> Email</label>
+        <div class="input-shell">
+          <i class="fas fa-envelope input-shell-icon" aria-hidden="true"></i>
+          <input type="email" id="emailVerifyAddress" readonly>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="emailVerifyCode"><i class="fas fa-key"></i> Код из письма</label>
+        <div class="input-shell">
+          <i class="fas fa-key input-shell-icon" aria-hidden="true"></i>
+          <input type="text" id="emailVerifyCode" class="verification-code-input" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="000000" autocomplete="one-time-code" required>
+        </div>
+        <div class="field-error" id="emailVerifyCodeError"></div>
+      </div>
+      <button type="submit" class="btn-primary btn-block btn-lg" id="emailVerifySubmitBtn">Подтвердить email</button>
+      <button type="button" id="resendEmailVerifyBtn" class="btn-secondary btn-block auth-back-btn">Отправить код снова</button>
+      <div id="emailVerifyStatus" class="auth-status"></div>
+    </form>
+  </div>
+</div>
+
+<div id="settingsModal" class="modal" aria-hidden="true">
+  <div class="modal-content settings-modal">
+    <div class="settings-layout">
+      <aside class="settings-sidebar">
+        <div class="settings-sidebar-head">
+          <span class="login-kicker"><i class="fas fa-sliders-h"></i> Аккаунт</span>
+          <h3>Настройки</h3>
+          <p>Управление безопасностью, уведомлениями и интерфейсом</p>
+        </div>
+        <nav class="settings-nav">
+          <button type="button" class="settings-nav-btn active" data-settings-section="security">
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+            <span class="settings-nav-btn-text">
+              <strong class="settings-nav-btn-title">Безопасность</strong>
+              <span class="settings-nav-btn-sub">Сессии, входы и контакты</span>
+            </span>
+          </button>
+          <button type="button" class="settings-nav-btn" data-settings-section="notifications">
+            <i class="fas fa-bell" aria-hidden="true"></i>
+            <span class="settings-nav-btn-text">
+              <strong class="settings-nav-btn-title">Уведомления</strong>
+              <span class="settings-nav-btn-sub">Email и push-уведомления</span>
+            </span>
+          </button>
+          <button type="button" class="settings-nav-btn" data-settings-section="interface">
+            <i class="fas fa-palette" aria-hidden="true"></i>
+            <span class="settings-nav-btn-text">
+              <strong class="settings-nav-btn-title">Интерфейс</strong>
+              <span class="settings-nav-btn-sub">Тема, язык и часовой пояс</span>
+            </span>
+          </button>
+          <button type="button" class="settings-nav-btn" data-settings-section="privacy">
+            <i class="fas fa-user-secret" aria-hidden="true"></i>
+            <span class="settings-nav-btn-text">
+              <strong class="settings-nav-btn-title">Приватность</strong>
+              <span class="settings-nav-btn-sub">Видимость профиля</span>
+            </span>
+          </button>
+          <button type="button" class="settings-nav-btn" data-settings-section="account">
+            <i class="fas fa-user-cog" aria-hidden="true"></i>
+            <span class="settings-nav-btn-text">
+              <strong class="settings-nav-btn-title">Аккаунт</strong>
+              <span class="settings-nav-btn-sub">Пароль и удаление</span>
+            </span>
+          </button>
+        </nav>
+      </aside>
+      <section class="settings-content">
+        <div class="settings-content-header">
+          <div class="settings-content-header-main">
+            <h3 id="settingsSectionTitle">Безопасность</h3>
+            <p class="settings-section-subtitle" id="settingsSectionSubtitle">Сессии, входы и контакты</p>
+          </div>
+          <span class="close-modal settings-close" aria-label="Закрыть">&times;</span>
+        </div>
+        <div class="settings-panel active" data-settings-panel="security">
+          <div class="settings-card"><div class="settings-card-title"><i class="fas fa-laptop"></i> Активные сессии</div><p class="settings-card-sub">Устройства и браузеры, где выполнен вход.</p><div id="settingsSessionsList" class="settings-list"></div><button type="button" class="btn-secondary" id="settingsRevokeAllBtn"><i class="fas fa-sign-out-alt"></i> Выйти везде</button></div>
+          <div class="settings-card"><div class="settings-card-title"><i class="fas fa-history"></i> История входов</div><div id="settingsLoginHistoryList" class="settings-list"></div></div>
+          <div class="settings-card"><div class="settings-card-title"><i class="fas fa-check-circle"></i> Подтверждение контактов</div><div class="settings-status-grid"><div class="settings-status-item"><span>Email</span><strong id="settingsEmailStatus" class="settings-verify-status is-pending">Не подтверждён</strong></div><div class="settings-status-item"><span>Телефон</span><strong id="settingsPhoneStatus" class="settings-verify-status is-pending">Не подтверждён</strong></div></div><div class="form-field settings-phone-field"><label>Телефон</label><input type="tel" id="settingsPhoneInput" maxlength="11" placeholder="79001234567"></div></div>
+          <div class="settings-card" id="settingsCaptchaBlockCard"><div class="settings-card-title"><i class="fas fa-robot"></i> Ограничение капчи</div><p id="settingsCaptchaBlockText" class="settings-card-sub">Проверка доступна.</p></div>
+        </div>
+        <div class="settings-panel" data-settings-panel="notifications">
+          <div class="settings-card settings-notify-card">
+            <div class="settings-card-title"><i class="fas fa-envelope"></i> Email-уведомления</div>
+            <p class="settings-card-sub settings-notify-sub-email">Выберите, о чём сообщать на почту.</p>
+            <div class="settings-notify-list">
+              <label class="settings-notify-item">
+                <span class="settings-notify-icon settings-notify-icon-reply" aria-hidden="true"><i class="fas fa-reply"></i></span>
+                <span class="settings-notify-body">
+                  <strong class="settings-notify-label">Ответ на заявку</strong>
+                  <span class="settings-notify-desc settings-notify-desc-reply">Когда менеджер ответил на вашу заявку</span>
+                </span>
+                <span class="settings-switch">
+                  <input type="checkbox" id="settingsNotifyReply">
+                  <span class="settings-switch-slider" aria-hidden="true"></span>
+                </span>
+              </label>
+              <label class="settings-notify-item">
+                <span class="settings-notify-icon settings-notify-icon-status" aria-hidden="true"><i class="fas fa-tasks"></i></span>
+                <span class="settings-notify-body">
+                  <strong class="settings-notify-label">Статус проекта</strong>
+                  <span class="settings-notify-desc settings-notify-desc-status">Изменения статуса вашего проекта</span>
+                </span>
+                <span class="settings-switch">
+                  <input type="checkbox" id="settingsNotifyStatus">
+                  <span class="settings-switch-slider" aria-hidden="true"></span>
+                </span>
+              </label>
+              <label class="settings-notify-item">
+                <span class="settings-notify-icon settings-notify-icon-news" aria-hidden="true"><i class="fas fa-newspaper"></i></span>
+                <span class="settings-notify-body">
+                  <strong class="settings-notify-label">Новости CoreDev</strong>
+                  <span class="settings-notify-desc settings-notify-desc-news">Новости, обновления и анонсы CoreDev</span>
+                </span>
+                <span class="settings-switch">
+                  <input type="checkbox" id="settingsNotifyNews">
+                  <span class="settings-switch-slider" aria-hidden="true"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-card settings-notify-card settings-notify-card-push">
+            <div class="settings-notify-push-head">
+              <span class="settings-notify-icon settings-notify-icon-push" aria-hidden="true"><i class="fas fa-comment-dots"></i></span>
+              <div>
+                <div class="settings-card-title settings-notify-push-title"><i class="fas fa-bell"></i> Push / Toast</div>
+                <p class="settings-card-sub settings-notify-sub-push">Всплывающие уведомления прямо на сайте.</p>
+              </div>
+            </div>
+            <label class="settings-notify-item settings-notify-item-push">
+              <span class="settings-notify-body">
+                <strong class="settings-notify-label settings-notify-push-label">Показывать уведомления на сайте</strong>
+                <span class="settings-notify-desc settings-notify-desc-push">Короткие подсказки в углу экрана при важных событиях</span>
+              </span>
+              <span class="settings-switch">
+                <input type="checkbox" id="settingsPushEnabled">
+                <span class="settings-switch-slider" aria-hidden="true"></span>
+              </span>
+            </label>
+          </div>
+          <div class="settings-card settings-notify-card">
+            <div class="settings-card-title"><i class="fas fa-clock"></i> Частота рассылки</div>
+            <p class="settings-card-sub settings-notify-sub-freq">Как часто отправлять письма на email.</p>
+            <div class="settings-freq-options" role="radiogroup" aria-label="Частота рассылки">
+              <label class="settings-freq-option">
+                <input type="radio" name="settingsNotifyFrequency" value="immediate" checked>
+                <span class="settings-freq-option-content">
+                  <i class="fas fa-bolt" aria-hidden="true"></i>
+                  <span class="settings-freq-label">Сразу</span>
+                  <span class="settings-freq-hint settings-freq-hint-immediate">Без задержки</span>
+                </span>
+              </label>
+              <label class="settings-freq-option">
+                <input type="radio" name="settingsNotifyFrequency" value="daily">
+                <span class="settings-freq-option-content">
+                  <i class="fas fa-calendar-day" aria-hidden="true"></i>
+                  <span class="settings-freq-label">Раз в день</span>
+                  <span class="settings-freq-hint settings-freq-hint-daily">Одним дайджестом</span>
+                </span>
+              </label>
+              <label class="settings-freq-option">
+                <input type="radio" name="settingsNotifyFrequency" value="important">
+                <span class="settings-freq-option-content">
+                  <i class="fas fa-star" aria-hidden="true"></i>
+                  <span class="settings-freq-label">Только важное</span>
+                  <span class="settings-freq-hint settings-freq-hint-important">Только критичные события</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="settings-panel" data-settings-panel="interface">
+          <div class="settings-card"><div class="settings-card-title"><i class="fas fa-adjust"></i> Тема</div><select id="settingsTheme" class="settings-select"><option value="dark">Тёмная</option><option value="light">Светлая</option><option value="system">Системная</option></select></div>
+          <div class="settings-card">
+            <div class="settings-card-title"><i class="fas fa-language"></i> Язык</div>
+            <p class="settings-card-sub">Интерфейс сайта отображается на русском языке.</p>
+            <select id="settingsLanguage" class="settings-select" hidden aria-hidden="true">
+              <option value="ru" selected>Русский</option>
+            </select>
+            <div class="settings-lang-fixed" aria-label="Язык интерфейса">Русский</div>
+          </div>
+          <div class="settings-card"><div class="settings-card-title"><i class="fas fa-globe"></i> Часовой пояс</div><select id="settingsTimezone" class="settings-select"><option value="Europe/Moscow">Москва (UTC+3)</option><option value="Europe/Kaliningrad">Калининград (UTC+2)</option><option value="Asia/Yekaterinburg">Екатеринбург (UTC+5)</option><option value="Asia/Almaty">Алматы (UTC+6)</option><option value="Asia/Vladivostok">Владивосток (UTC+10)</option><option value="UTC">UTC</option></select></div>
+        </div>
+        <div class="settings-panel" data-settings-panel="privacy">
+          <div class="settings-card"><div class="settings-card-title"><i class="fas fa-eye-slash"></i> Видимость профиля</div><select id="settingsProfileVisibility" class="settings-select"><option value="public">Показывать ник и email</option><option value="hidden">Скрыть от других</option></select><p class="settings-card-sub">Для будущего чата и команды.</p></div>
+        </div>
+        <div class="settings-panel" data-settings-panel="account">
+          <div class="settings-card settings-account-card">
+            <div class="settings-card-title" id="settingsAccountCardTitle"><i class="fas fa-user-cog"></i> Управление аккаунтом</div>
+            <p class="settings-card-sub settings-account-sub" id="settingsAccountCardSub">Безопасность входа и критичные действия с аккаунтом.</p>
+            <div class="settings-account-grid">
+              <button type="button" class="settings-account-action" id="settingsOpenPasswordBtn">
+                <span class="settings-account-action-icon tone-password" aria-hidden="true"><i class="fas fa-key"></i></span>
+                <span class="settings-account-action-body">
+                  <strong class="settings-account-action-title">Изменить пароль</strong>
+                  <span class="settings-account-action-hint">Обновите пароль для защиты входа</span>
+                </span>
+                <i class="fas fa-chevron-right settings-account-action-arrow" aria-hidden="true"></i>
+              </button>
+              <div class="settings-account-danger-zone">
+                <button type="button" class="settings-account-action danger" id="settingsOpenDeleteBtn">
+                  <span class="settings-account-action-icon tone-delete" aria-hidden="true"><i class="fas fa-trash-alt"></i></span>
+                  <span class="settings-account-action-body">
+                    <strong class="settings-account-action-title">Удалить аккаунт</strong>
+                    <span class="settings-account-action-hint">Безвозвратное удаление профиля и всех данных</span>
+                  </span>
+                  <i class="fas fa-chevron-right settings-account-action-arrow" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-footer"><div id="settingsStatus" class="auth-status"></div><button type="button" class="btn-primary" id="settingsSaveBtn"><i class="fas fa-save"></i> Сохранить настройки</button></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="adminModal" class="modal" aria-hidden="true">
+  <div class="modal-content settings-modal admin-modal">
+    <div class="settings-layout admin-layout">
+      <aside class="settings-sidebar admin-sidebar">
+        <div class="settings-sidebar-head admin-sidebar-head">
+          <span class="login-kicker"><i class="fas fa-user-shield"></i> CoreDev</span>
+          <h3>Админ панель</h3>
+          <p>Управление пользователями, поддержкой и мониторингом</p>
+        </div>
+        <nav class="settings-nav admin-nav">
+          <button type="button" class="settings-nav-btn admin-nav-btn active" data-admin-section="users"><i class="fas fa-users"></i> <span class="admin-nav-label" id="adminUsersNavLabel">Пользователи</span><span class="admin-nav-badge" id="adminUsersNavBadge" hidden aria-hidden="true"></span></button>
+          <button type="button" class="settings-nav-btn admin-nav-btn" data-admin-section="support"><i class="fas fa-headset"></i> <span class="admin-nav-label" id="adminSupportNavLabel">Поддержка</span><span class="admin-nav-badge" id="adminSupportNavBadge" hidden aria-hidden="true"></span></button>
+          <button type="button" class="settings-nav-btn admin-nav-btn" data-admin-section="logs"><i class="fas fa-scroll"></i> <span class="admin-nav-label" id="adminLogsNavLabel">Логи</span><span class="admin-nav-badge" id="adminLogsNavBadge" hidden aria-hidden="true"></span></button>
+        </nav>
+      </aside>
+      <section class="settings-content admin-content">
+        <div class="settings-content-header admin-content-header">
+          <h3 id="adminSectionTitle">Пользователи</h3>
+          <span class="close-modal admin-close" aria-label="Закрыть">&times;</span>
+        </div>
+        <div class="admin-panel active" data-admin-panel="users" id="adminUsersPanel">
+          <div class="settings-card admin-users-card">
+            <div class="settings-card-title" id="adminUsersCardTitle"><i class="fas fa-database"></i> База пользователей</div>
+            <p class="settings-card-sub admin-users-sub" id="adminUsersCardSub">Все зарегистрированные аккаунты из базы данных.</p>
+            <div id="adminUsersCount" class="admin-users-count" hidden></div>
+            <div id="adminUsersStatus" class="admin-status"></div>
+            <div class="admin-filter-bar" id="adminUsersFilterBar">
+              <label class="admin-filter-search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="text" id="adminUsersSearchInput" placeholder="Поиск по email, ФИО или нику" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly>
+              </label>
+              <select id="adminUsersRoleFilter" class="admin-filter-select" aria-label="Фильтр по роли">
+                <option value="all">Все роли</option>
+                <option value="admin">Админы</option>
+                <option value="member">Участники</option>
+              </select>
+              <select id="adminUsersVerifiedFilter" class="admin-filter-select" aria-label="Фильтр по подтверждению">
+                <option value="all">Все статусы</option>
+                <option value="yes">Подтверждённые</option>
+                <option value="no">Не подтверждённые</option>
+              </select>
+            </div>
+            <div class="admin-users-table-wrap">
+              <table class="admin-users-table">
+                <thead>
+                  <tr>
+                    <th>Email</th>
+                    <th>ФИО</th>
+                    <th>Ник</th>
+                    <th>Роль</th>
+                    <th>Подтверждён</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="adminUsersTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="admin-panel" data-admin-panel="support" id="adminSupportPanel" hidden>
+          <div class="settings-card admin-support-card">
+            <div class="settings-card-title" id="adminSupportCardTitle"><i class="fas fa-headset"></i> Техподдержка</div>
+            <p class="settings-card-sub admin-support-sub" id="adminSupportCardSub">Сообщения пользователей. Отвечайте прямо из панели.</p>
+            <div id="adminSupportStatus" class="admin-status"></div>
+            <div class="admin-support-layout">
+              <aside class="admin-support-sidebar">
+                <div class="admin-support-sidebar-head">
+                  <span class="admin-support-sidebar-title">Обращения</span>
+                  <span class="admin-support-sidebar-hint">Входящие диалоги</span>
+                </div>
+                <div class="admin-support-threads" id="adminSupportThreadsList"></div>
+              </aside>
+              <div class="admin-support-conversation">
+                <div class="admin-support-conversation-head" id="adminSupportConversationHead" hidden></div>
+                <div class="admin-support-messages" id="adminSupportMessages">
+                  <div class="admin-support-placeholder" id="adminSupportPlaceholder">
+                    <div class="admin-support-placeholder-icon" aria-hidden="true"><i class="fas fa-inbox"></i></div>
+                    <strong>Выберите обращение</strong>
+                    <p>Диалог откроется здесь — можно ответить пользователю напрямую.</p>
+                  </div>
+                </div>
+                <form class="admin-support-reply-form" id="adminSupportReplyForm" hidden>
+                  <div class="admin-support-composer">
+                    <textarea id="adminSupportReplyInput" rows="1" maxlength="2000" placeholder="Напишите ответ..."></textarea>
+                    <button type="submit" class="admin-support-send" aria-label="Отправить">
+                      <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="admin-panel" data-admin-panel="logs" id="adminLogsPanel" hidden>
+          <div class="settings-card admin-logs-card">
+            <div class="settings-card-title"><i class="fas fa-scroll"></i> Логи сайта</div>
+            <p class="settings-card-sub admin-logs-sub">События на сайте. Время показано в вашем часовом поясе.</p>
+            <div id="adminLogsStatus" class="admin-status"></div>
+            <div id="adminLogsCount" class="admin-users-count admin-logs-count" hidden></div>
+            <div class="admin-filter-bar" id="adminLogsFilterBar">
+              <label class="admin-filter-search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="text" id="adminLogsSearchInput" placeholder="Поиск по тексту, email или IP" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly>
+              </label>
+              <select id="adminLogsEventFilter" class="admin-filter-select" aria-label="Фильтр по типу события">
+                <option value="">Все события</option>
+              </select>
+            </div>
+            <div class="admin-logs-list" id="adminLogsList"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="adminUserManageModal" class="modal" aria-hidden="true">
+  <div class="modal-content admin-user-manage-modal">
+    <div class="admin-manage-glow" aria-hidden="true"></div>
+    <div class="admin-manage-top">
+      <div class="admin-manage-top-left">
+        <button type="button" class="admin-modal-back-btn" id="adminUserManageBack" aria-label="Назад" title="Назад">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <span class="admin-manage-kicker"><i class="fas fa-sliders-h"></i> Управление аккаунтом</span>
+      </div>
+      <span class="close-modal admin-user-manage-close" aria-label="Закрыть">&times;</span>
+    </div>
+
+    <div class="admin-manage-profile">
+      <div class="admin-manage-avatar" id="adminUserManageAvatar" aria-hidden="true">U</div>
+      <div class="admin-manage-profile-main">
+        <h3 id="adminUserManageTitle">Пользователь</h3>
+        <p class="admin-manage-email" id="adminUserManageEmail"></p>
+        <div class="admin-manage-badges">
+          <span id="adminUserManageRoleBadge" hidden></span>
+          <span class="admin-manage-meta-badge" id="adminUserManagePhoneBadge" hidden></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-manage-section">
+      <p class="admin-manage-section-title" data-i18n="admin.manage.section.profile">Данные профиля</p>
+      <div class="admin-manage-grid">
+        <button type="button" class="admin-manage-card" data-admin-edit="email">
+          <span class="admin-manage-card-icon tone-email"><i class="fas fa-envelope"></i></span>
+          <span class="admin-manage-card-body">
+            <strong class="admin-manage-card-title">Изменить почту</strong>
+            <span class="admin-manage-card-hint" data-hint="email">Email для входа и уведомлений</span>
+          </span>
+          <i class="fas fa-chevron-right admin-manage-card-arrow" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="admin-manage-card" data-admin-edit="full_name">
+          <span class="admin-manage-card-icon tone-name"><i class="fas fa-id-card"></i></span>
+          <span class="admin-manage-card-body">
+            <strong class="admin-manage-card-title">Изменить ФИО</strong>
+            <span class="admin-manage-card-hint" data-hint="full_name">Полное имя в профиле</span>
+          </span>
+          <i class="fas fa-chevron-right admin-manage-card-arrow" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="admin-manage-card" data-admin-edit="username">
+          <span class="admin-manage-card-icon tone-user"><i class="fas fa-user"></i></span>
+          <span class="admin-manage-card-body">
+            <strong class="admin-manage-card-title">Изменить ник</strong>
+            <span class="admin-manage-card-hint" data-hint="username">Отображаемое имя пользователя</span>
+          </span>
+          <i class="fas fa-chevron-right admin-manage-card-arrow" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="admin-manage-card" data-admin-edit="role">
+          <span class="admin-manage-card-icon tone-role"><i class="fas fa-user-shield"></i></span>
+          <span class="admin-manage-card-body">
+            <strong class="admin-manage-card-title">Изменить роль</strong>
+            <span class="admin-manage-card-hint" data-hint="role">Участник или администратор</span>
+          </span>
+          <i class="fas fa-chevron-right admin-manage-card-arrow" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="admin-manage-card" data-admin-edit="phone">
+          <span class="admin-manage-card-icon tone-phone"><i class="fas fa-phone"></i></span>
+          <span class="admin-manage-card-body">
+            <strong class="admin-manage-card-title">Изменить номер телефона</strong>
+            <span class="admin-manage-card-hint" data-hint="phone">Контактный номер аккаунта</span>
+          </span>
+          <i class="fas fa-chevron-right admin-manage-card-arrow" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="admin-manage-danger-zone">
+      <p class="admin-manage-section-title danger" data-i18n="admin.manage.section.danger">Опасная зона</p>
+      <button type="button" class="admin-manage-card danger" data-admin-edit="delete">
+        <span class="admin-manage-card-icon tone-delete"><i class="fas fa-trash-alt"></i></span>
+        <span class="admin-manage-card-body">
+          <strong class="admin-manage-card-title">Удалить аккаунт</strong>
+          <span class="admin-manage-card-hint" data-hint="delete">Безвозвратное удаление из базы</span>
+        </span>
+        <i class="fas fa-chevron-right admin-manage-card-arrow" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div id="adminUserManageStatus" class="admin-status"></div>
+  </div>
+</div>
+
+<div id="adminUserEditModal" class="modal" aria-hidden="true">
+  <div class="modal-content admin-user-edit-modal">
+    <div class="admin-edit-glow" aria-hidden="true"></div>
+    <div class="admin-edit-top">
+      <div class="admin-edit-top-left">
+        <button type="button" class="admin-modal-back-btn" id="adminUserEditBack" aria-label="Назад" title="Назад">
+          <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <span class="admin-edit-kicker" id="adminUserEditKicker"><i class="fas fa-edit"></i> Редактирование</span>
+      </div>
+      <span class="close-modal admin-user-edit-close" aria-label="Закрыть">&times;</span>
+    </div>
+
+    <div class="admin-edit-head">
+      <span class="admin-edit-field-icon tone-email" id="adminUserEditIcon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+      <div class="admin-edit-head-main">
+        <h3 id="adminUserEditTitle">Изменить почту</h3>
+        <p class="admin-edit-subtitle" id="adminUserEditSubtitle">Аккаунт пользователя</p>
+      </div>
+    </div>
+
+    <form id="adminUserEditForm" class="admin-edit-form" novalidate>
+      <div class="admin-edit-field-card">
+        <label id="adminUserEditLabel" for="adminUserEditInput">Новая почта</label>
+        <p class="admin-edit-field-hint" id="adminUserEditHint">Адрес для входа и уведомлений</p>
+        <div class="admin-edit-input-wrap">
+          <input type="text" id="adminUserEditInput" class="admin-edit-input" autocomplete="off" placeholder="user@example.com">
+          <select id="adminUserEditSelect" class="admin-edit-select" hidden>
+            <option value="member">Участник</option>
+            <option value="admin">Администратор</option>
+          </select>
+        </div>
+        <div class="field-error" id="adminUserEditError"></div>
+      </div>
+      <div class="admin-user-edit-actions">
+        <button type="submit" class="btn-primary admin-edit-save-btn" id="adminUserEditSubmit">Сохранить</button>
+      </div>
+    </form>
+    <div id="adminUserEditStatus" class="admin-status"></div>
+  </div>
+</div>
+
+<div id="adminUserDeleteModal" class="modal" aria-hidden="true">
+  <div class="modal-content profile-edit-modal confirm-delete-modal admin-user-delete-modal">
+    <button type="button" class="admin-modal-back-btn admin-delete-back-btn" id="adminUserDeleteBack" aria-label="Назад" title="Назад">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i>
+    </button>
+    <div class="confirm-delete-icon"><i class="fas fa-trash-alt"></i></div>
+    <h3>Удалить аккаунт?</h3>
+    <p class="confirm-delete-text" id="adminUserDeleteText">Это действие необратимо.</p>
+    <div class="confirm-delete-actions">
+      <button type="button" class="btn-secondary" id="adminUserDeleteCancel">Отмена</button>
+      <button type="button" class="btn-primary danger-button" id="adminUserDeleteConfirm">Удалить</button>
+    </div>
+    <div id="adminUserDeleteStatus" class="admin-status"></div>
+  </div>
+</div>
+
+<div id="projectCaptchaModal" class="modal" aria-hidden="true">
+  <div class="modal-content captcha-modal">
+    <div class="modal-header">
+      <div>
+        <span class="login-kicker"><i class="fas fa-shield-alt"></i> Проверка безопасности</span>
+        <h3><i class="fas fa-user-check"></i> Подтвердите отправку</h3>
+        <p class="modal-subtitle">Решите задание ниже, чтобы отправить заявку</p>
+      </div>
+      <span class="close-modal" id="projectCaptchaClose" aria-label="Закрыть">&times;</span>
+    </div>
+    <div class="captcha-question-box">
+      <p id="projectCaptchaQuestion">Загрузка проверки...</p>
+    </div>
+    <div class="captcha-row">
+      <input type="text" id="projectCaptchaAnswer" placeholder="Введите ответ" autocomplete="off">
+      <button type="button" class="btn-outline captcha-refresh-btn" id="projectCaptchaRefresh" aria-label="Обновить задание"><i class="fas fa-sync-alt"></i></button>
+    </div>
+    <div class="field-error" id="projectCaptchaError"></div>
+    <div id="projectCaptchaModalStatus" class="form-status" style="display:none"></div>
+    <button type="button" class="btn-primary btn-block" id="projectCaptchaConfirm" style="margin-top:18px">
+      <i class="fas fa-paper-plane"></i> Отправить заявку
+    </button>
+  </div>
+</div>
+
+<div id="supportChatRoot" class="support-chat-root" aria-live="polite">
+  <button type="button" id="supportChatToggle" class="support-chat-toggle" aria-expanded="false" aria-controls="supportChatPanel" aria-label="Чат поддержки" title="Чат поддержки">
+    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+    <span id="supportChatBadge" class="support-chat-badge" hidden></span>
+  </button>
+  <div id="supportChatPanel" class="support-chat-panel" aria-hidden="true">
+    <div class="support-chat-header">
+      <div class="support-chat-header-main">
+        <div class="support-chat-header-avatar" aria-hidden="true">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="support-chat-header-text">
+          <strong>Поддержка</strong>
+          <span class="support-chat-online"><span class="support-chat-online-dot" aria-hidden="true"></span>Онлайн · ~15 мин</span>
+        </div>
+      </div>
+      <button type="button" class="support-chat-close" id="supportChatClose" aria-label="Закрыть">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="supportChatGuest" class="support-chat-guest" hidden>
+      <div class="support-chat-guest-card">
+        <div class="support-chat-guest-icon" aria-hidden="true"><i class="fas fa-user-lock"></i></div>
+        <h4>Войдите в аккаунт</h4>
+        <p>Авторизуйтесь, чтобы написать в поддержку и получать ответы в этом чате.</p>
+        <button type="button" class="support-chat-login-btn" id="supportChatLoginBtn">
+          <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Войти
+        </button>
+      </div>
+    </div>
+    <div id="supportChatBody" class="support-chat-body" hidden>
+      <div class="support-chat-messages-wrap">
+        <div id="supportChatMessages" class="support-chat-messages"></div>
+      </div>
+      <div class="support-chat-footer">
+        <form id="supportChatForm" class="support-chat-form">
+          <div class="support-chat-composer">
+            <textarea id="supportChatInput" rows="1" maxlength="2000" placeholder="Напишите сообщение..." aria-label="Сообщение в поддержку"></textarea>
+            <button type="submit" class="support-chat-send" id="supportChatSend" aria-label="Отправить">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+        <div id="supportChatStatus" class="support-chat-status"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="teamMemberModal" class="modal content-cms-modal" aria-hidden="true">
+  <div class="modal-content content-cms-modal-content">
+    <div class="modal-header">
+      <h3><i class="fas fa-user-plus"></i> Добавить сотрудника</h3>
+      <span class="close-modal content-cms-close" data-close-modal="teamMemberModal" aria-label="Закрыть">&times;</span>
+    </div>
+    <form id="teamMemberForm" class="content-cms-form" novalidate>
+      <div class="content-cms-image-field">
+        <label class="content-cms-label">Фотография</label>
+        <div class="content-cms-image-preview-wrap team-image-preview-wrap">
+          <img id="teamImagePreview" class="content-cms-image-preview" alt="" hidden>
+          <div id="teamImagePlaceholder" class="content-cms-image-placeholder"><i class="fas fa-camera"></i><span>600×450</span></div>
+        </div>
+        <input type="file" id="teamImageInput" accept="image/*" hidden>
+        <button type="button" class="btn-outline" id="teamImagePickBtn"><i class="fas fa-upload"></i> Загрузить фото</button>
+        <p class="content-cms-hint">Фото автоматически обрежется под размер карточки сотрудника.</p>
+      </div>
+      <div class="form-group form-field">
+        <label for="teamMemberName">ФИО</label>
+        <input type="text" id="teamMemberName" required maxlength="120">
+      </div>
+      <div class="form-group form-field">
+        <label for="teamMemberRole">Должность</label>
+        <input type="text" id="teamMemberRole" required maxlength="120" placeholder="Например: CTO & Co-founder">
+      </div>
+      <div class="form-group form-field">
+        <label for="teamMemberBio">Описание</label>
+        <textarea id="teamMemberBio" rows="4" required maxlength="1200"></textarea>
+      </div>
+      <div class="form-group form-field">
+        <label for="teamMemberDetail">Текст кнопки «Подробнее»</label>
+        <input type="text" id="teamMemberDetail" maxlength="500" placeholder="Краткая информация при нажатии">
+      </div>
+      <div class="form-group form-field">
+        <label>Теги</label>
+        <div class="tag-input-field" id="teamTagsField">
+          <div class="tag-input-chips" id="teamTagsChips"></div>
+          <div class="tag-input-row">
+            <input type="text" id="teamTagInput" list="teamTagSuggestions" maxlength="48" placeholder="Добавить тег">
+            <datalist id="teamTagSuggestions"></datalist>
+            <button type="button" class="btn-outline btn-small" id="teamTagAddBtn"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="teamMemberStatus" class="content-cms-status"></div>
+      <button type="submit" class="btn-primary btn-block" id="teamMemberSubmitBtn"><i class="fas fa-check"></i> Сохранить</button>
+    </form>
+  </div>
+</div>
+
+<div id="projectModal" class="modal content-cms-modal" aria-hidden="true">
+  <div class="modal-content content-cms-modal-content">
+    <div class="modal-header">
+      <h3><i class="fas fa-folder-plus"></i> Добавить проект</h3>
+      <span class="close-modal content-cms-close" data-close-modal="projectModal" aria-label="Закрыть">&times;</span>
+    </div>
+    <form id="projectForm" class="content-cms-form" novalidate>
+      <div class="content-cms-image-field">
+        <label class="content-cms-label">Обложка проекта</label>
+        <div class="content-cms-image-preview-wrap project-image-preview-wrap">
+          <img id="projectImagePreview" class="content-cms-image-preview" alt="" hidden>
+          <div id="projectImagePlaceholder" class="content-cms-image-placeholder"><i class="fas fa-image"></i><span>600×400</span></div>
+        </div>
+        <input type="file" id="projectImageInput" accept="image/*" hidden>
+        <button type="button" class="btn-outline" id="projectImagePickBtn"><i class="fas fa-upload"></i> Загрузить фото</button>
+        <p class="content-cms-hint">Изображение автоматически обрежется под размер карточки проекта.</p>
+      </div>
+      <div class="form-group form-field">
+        <label for="projectTitle">Название</label>
+        <input type="text" id="projectTitle" required maxlength="120">
+      </div>
+      <div class="form-group form-field">
+        <label for="projectDescription">Описание</label>
+        <textarea id="projectDescription" rows="4" required maxlength="1200"></textarea>
+      </div>
+      <div class="form-group form-field">
+        <label for="projectDetail">Текст «Детали кейса»</label>
+        <input type="text" id="projectDetail" maxlength="500" placeholder="Краткая информация при нажатии">
+      </div>
+      <div class="form-group form-field">
+        <label>Стек / теги</label>
+        <div class="tag-input-field" id="projectTagsField">
+          <div class="tag-input-chips" id="projectTagsChips"></div>
+          <div class="tag-input-row">
+            <input type="text" id="projectTagInput" list="projectTagSuggestions" maxlength="48" placeholder="Добавить технологию">
+            <datalist id="projectTagSuggestions"></datalist>
+            <button type="button" class="btn-outline btn-small" id="projectTagAddBtn"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="projectStatus" class="content-cms-status"></div>
+      <button type="submit" class="btn-primary btn-block" id="projectSubmitBtn"><i class="fas fa-check"></i> Сохранить</button>
+    </form>
+  </div>
+</div>
+
+<div id="contentViewModal" class="modal content-cms-modal content-view-modal" aria-hidden="true">
+  <div class="modal-content content-view-modal-content">
+    <div class="modal-header">
+      <h3 id="contentViewTitle">Резюме</h3>
+      <span class="close-modal content-cms-close" data-close-modal="contentViewModal" aria-label="Закрыть">&times;</span>
+    </div>
+    <div class="content-view-body">
+      <img id="contentViewImage" class="content-view-image" alt="" hidden>
+      <div id="contentViewSubtitle" class="content-view-subtitle"></div>
+      <div id="contentViewDescription" class="content-view-description"></div>
+      <div id="contentViewTags" class="content-view-tags"></div>
+      <div id="contentViewExtra" class="content-view-extra" hidden></div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/js/i18n.js"></script>
+<script src="/static/js/datetime.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="/static/js/scroll-reveal.js"></script>
+<script src="/static/js/content-cms.js"></script>
+<script src="/static/js/admin.js"></script>
+<script src="/static/js/settings.js"></script>
+<script src="/static/js/support-chat.js"></script>
+</body>
+</html>
