@@ -1,0 +1,94 @@
+{
+  "settings": {
+    "theme": "dark",
+    "language": "ru",
+    "timezone": "Europe/Moscow",
+    "email_notifications": {
+      "application_reply": true,
+      "project_status": true,
+      "news": false
+    },
+    "push_notifications": true,
+    "notification_frequency": "immediate",
+    "profile_visibility": "public",
+    "phone": "89279577126",
+    "phone_verified": true,
+    "default_contacts": {
+      "phone": "",
+      "company": "",
+      "position": "",
+      "budget_currency": "RUB"
+    }
+  },
+  "sessions": [
+    {
+      "session_id": "ZgeMHQPtfN57RILLPbBUWg",
+      "email": "coredev90@gmail.com",
+      "token_hash": "a92458b9db836602bf705e0a9539beb1ddb28acc25262ee7613c683622d0a4f1",
+      "created_at": 1782583727,
+      "expires_at": 1782670127,
+      "last_seen_at": 1782583740,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "revoked": true
+    }
+  ],
+  "login_history": [
+    {
+      "at": 1782583727,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781875350,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781868425,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781868106,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781867408,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781586876,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    }
+  ],
+  "applications": [],
+  "draft": {
+    "name": "Нефедов Максим Сергеевич",
+    "company": "",
+    "email": "coredev90@gmail.com",
+    "phone": "4",
+    "position": "",
+    "budget_amount": "",
+    "budget_currency": "RUB",
+    "message": "",
+    "updated_at": 1781585156
+  },
+  "email_verified": true
+}

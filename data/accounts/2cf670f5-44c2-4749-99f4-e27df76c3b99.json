@@ -1,0 +1,49 @@
+{
+  "settings": {
+    "theme": "dark",
+    "language": "ru",
+    "timezone": "Europe/Moscow",
+    "email_notifications": {
+      "application_reply": true,
+      "project_status": true,
+      "news": false
+    },
+    "push_notifications": true,
+    "notification_frequency": "immediate",
+    "profile_visibility": "public",
+    "phone": "",
+    "phone_verified": false,
+    "default_contacts": {
+      "phone": "",
+      "company": "",
+      "position": "",
+      "budget_currency": "RUB"
+    }
+  },
+  "sessions": [
+    {
+      "session_id": "6DvKb_-AXslOFjnL4i2MAg",
+      "email": "gysgsdhcc@gmail.com",
+      "token_hash": "8570633c093e5c5c5e99f23ee94f718632fbd946853ef5912a3c3b1051238f67",
+      "created_at": 1781868801,
+      "expires_at": 1781955201,
+      "last_seen_at": 1781868844,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "revoked": true
+    }
+  ],
+  "login_history": [
+    {
+      "at": 1781868801,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    }
+  ],
+  "applications": [],
+  "draft": null,
+  "email_verified": true
+}

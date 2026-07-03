@@ -1,0 +1,77 @@
+{
+  "settings": {
+    "theme": "dark",
+    "language": "ru",
+    "timezone": "Europe/Moscow",
+    "email_notifications": {
+      "application_reply": true,
+      "project_status": true,
+      "news": false
+    },
+    "push_notifications": true,
+    "notification_frequency": "immediate",
+    "profile_visibility": "public",
+    "phone": "",
+    "phone_verified": false,
+    "default_contacts": {
+      "phone": "",
+      "company": "",
+      "position": "",
+      "budget_currency": "RUB"
+    }
+  },
+  "sessions": [
+    {
+      "session_id": "zwT8-FySnciSUAMJRVpOCA",
+      "email": "legendsbgmo@gmail.com",
+      "token_hash": "ad30690455288f85b63f27017a1cf2a73817a173e48a61093bcf5802c0cc1c24",
+      "created_at": 1781900939,
+      "expires_at": 1784492939,
+      "last_seen_at": 1781939473,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "revoked": true
+    }
+  ],
+  "login_history": [
+    {
+      "at": 1781900939,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781900931,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": false
+    },
+    {
+      "at": 1781900091,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781900085,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": false
+    },
+    {
+      "at": 1781866384,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    }
+  ],
+  "applications": [],
+  "draft": null,
+  "email_verified": true
+}

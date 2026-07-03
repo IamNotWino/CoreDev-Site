@@ -1,0 +1,108 @@
+{
+  "settings": {
+    "theme": "dark",
+    "language": "ru",
+    "timezone": "Europe/Moscow",
+    "email_notifications": {
+      "application_reply": true,
+      "project_status": true,
+      "news": true
+    },
+    "push_notifications": true,
+    "notification_frequency": "immediate",
+    "profile_visibility": "public",
+    "phone": "",
+    "phone_verified": false,
+    "default_contacts": {
+      "phone": "",
+      "company": "",
+      "position": "",
+      "budget_currency": "RUB"
+    }
+  },
+  "sessions": [
+    {
+      "session_id": "L2alBm_S8VHxnuMcRnsQxg",
+      "email": "maks.nefedov123@gmail.com",
+      "token_hash": "c35e27c6ab08b72c22435331cac04bb8e818986aeabdf9ad6845e5c2230e7698",
+      "created_at": 1782583750,
+      "expires_at": 1782670150,
+      "last_seen_at": 1782586593,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "revoked": false
+    }
+  ],
+  "login_history": [
+    {
+      "at": 1782583750,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1782583662,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781939487,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781900808,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781900192,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781875419,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781866263,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    },
+    {
+      "at": 1781857855,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 YaBrowser/26.4.0.0 Safari/537.36",
+      "device_label": "Chrome · Windows",
+      "success": true
+    }
+  ],
+  "applications": [],
+  "draft": {
+    "name": "Нефедов Выв Вава",
+    "company": "ММПКфы",
+    "email": "maks.nefedov123@gmail.com",
+    "phone": "9279577126",
+    "position": "",
+    "budget_amount": "",
+    "budget_currency": "RUB",
+    "message": "",
+    "updated_at": 1781940069
+  },
+  "email_verified": true
+}
